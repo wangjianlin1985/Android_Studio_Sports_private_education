@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	
+	
+	<!-- 指定spring的配置文件，默认从web根目录寻找配置文件，我们可以通过spring提供的classpath:前缀指定从类路径下寻找 -->
+	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>classpath:beans.xml</param-value>
+	</context-param>
+	
+	
+	<!-- 对Spring容器进行实例化 -->
+	<listener>
+	      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	
+	<!-- struts启用配置 -->
+	<filter>
+	      <filter-name>struts2</filter-name> 
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+    
+    
+    <!-- 登录验证servlet配置 -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+      
+    <!-- 用户注册servlet配置 -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- 上传图片servlet配置 -->
+    <servlet>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.UpPhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <url-pattern>/UpPhotoServlet</url-pattern>
+    </servlet-mapping> 
+    
+    <!-- 私教管理servlet配置 -->
+    <servlet>
+        <servlet-name>CoachServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.CoachServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CoachServlet</servlet-name>
+        <url-pattern>/CoachServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 学生家长管理servlet配置 -->
+    <servlet>
+        <servlet-name>StudentParentServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.StudentParentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentParentServlet</servlet-name>
+        <url-pattern>/StudentParentServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 城市管理servlet配置 -->
+    <servlet>
+        <servlet-name>CityServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.CityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CityServlet</servlet-name>
+        <url-pattern>/CityServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 现状态管理servlet配置 -->
+    <servlet>
+        <servlet-name>NowStateServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.NowStateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NowStateServlet</servlet-name>
+        <url-pattern>/NowStateServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 价格范围管理servlet配置 -->
+    <servlet>
+        <servlet-name>PriceRangeServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.PriceRangeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PriceRangeServlet</servlet-name>
+        <url-pattern>/PriceRangeServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 年龄范围管理servlet配置 -->
+    <servlet>
+        <servlet-name>AgeRangeServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.AgeRangeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AgeRangeServlet</servlet-name>
+        <url-pattern>/AgeRangeServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 普通管理员管理servlet配置 -->
+    <servlet>
+        <servlet-name>ManagerServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.ManagerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerServlet</servlet-name>
+        <url-pattern>/ManagerServlet</url-pattern>
+    </servlet-mapping>
+
+ 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

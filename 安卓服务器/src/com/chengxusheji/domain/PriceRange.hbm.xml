@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="PriceRange" table="PriceRange">
+
+          <!-- 主键价格范围id -->
+          <id name="prId" column="prId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单整型属性: 起始价 -->
+          <property
+            name="startPrice"
+            column="startPrice"
+            type="int"
+
+          />
+
+          <!-- 简单整型属性: 结束价 -->
+          <property
+            name="endPrice"
+            column="endPrice"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 显示信息 -->
+          <property
+            name="showText"
+            column="showText"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

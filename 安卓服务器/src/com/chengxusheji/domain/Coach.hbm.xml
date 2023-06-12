@@ -1,0 +1,136 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Coach" table="Coach">
+
+          <!-- 主键用户名 -->
+          <id name="coachUserName" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 登录密码 -->
+          <property
+            name="password"
+            column="password"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 姓名 -->
+          <property
+            name="name"
+            column="name"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 性别 -->
+          <property
+            name="sex"
+            column="sex"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 年龄范围 -->
+          <many-to-one name="ageRangeObj"
+            column="ageRangeObj"
+            class="AgeRange"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单整型属性: 年龄 -->
+          <property
+            name="age"
+            column="age"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 手机号 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 城市 -->
+          <many-to-one name="cityObj"
+            column="cityObj"
+            class="City"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 现状态 -->
+          <many-to-one name="nowStateObj"
+            column="nowStateObj"
+            class="NowState"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 收费价格区间 -->
+          <many-to-one name="priceRangeObj"
+            column="priceRangeObj"
+            class="PriceRange"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单整型属性: 价格(元/小时) -->
+          <property
+            name="price"
+            column="price"
+            type="int"
+
+          />
+
+          <!-- 简单图片属性: 教练照片 -->
+          <property
+            name="coachPhoto"
+            column="coachPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 教练简介 -->
+          <property
+            name="coachDesc"
+            column="coachDesc"
+            type="string"
+            length="3000"
+          />
+
+          <!-- 简单字符串属性: 审核状态 -->
+          <property
+            name="shzt"
+            column="shzt"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 注册时间 -->
+          <property
+            name="regTime"
+            column="regTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

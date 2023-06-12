@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MainCoachActivity"></activity>
+        <activity android:name="MainSpActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="CoachListActivity"></activity>
+        <activity android:name="CoachSpListActivity"></activity>
+        <activity android:name="CoachQueryActivity"></activity>
+        <activity android:name="CoachAddActivity"></activity>
+        <activity android:name="CoachRegisterActivity"></activity>
+        <activity android:name="CoachEditActivity"></activity>
+        <activity android:name="CoachDetailActivity"></activity>
+        <activity android:name="StudentParentListActivity"></activity>
+        <activity android:name="StudentParentCoachListActivity"></activity>
+        <activity android:name="StudentParentQueryActivity"></activity>
+        <activity android:name="StudentParentAddActivity"></activity>
+        <activity android:name="StudentParentRegisterActivity"></activity>
+        <activity android:name="StudentParentEditActivity"></activity>
+        <activity android:name="StudentParentDetailActivity"></activity>
+        <activity android:name="CityListActivity"></activity>
+        <activity android:name="CityQueryActivity"></activity>
+        <activity android:name="CityAddActivity"></activity>
+        <activity android:name="CityEditActivity"></activity>
+        <activity android:name="CityDetailActivity"></activity>
+        <activity android:name="NowStateListActivity"></activity>
+        <activity android:name="NowStateQueryActivity"></activity>
+        <activity android:name="NowStateAddActivity"></activity>
+        <activity android:name="NowStateEditActivity"></activity>
+        <activity android:name="NowStateDetailActivity"></activity>
+        <activity android:name="PriceRangeListActivity"></activity>
+        <activity android:name="PriceRangeQueryActivity"></activity>
+        <activity android:name="PriceRangeAddActivity"></activity>
+        <activity android:name="PriceRangeEditActivity"></activity>
+        <activity android:name="PriceRangeDetailActivity"></activity>
+        <activity android:name="AgeRangeListActivity"></activity>
+        <activity android:name="AgeRangeQueryActivity"></activity>
+        <activity android:name="AgeRangeAddActivity"></activity>
+        <activity android:name="AgeRangeEditActivity"></activity>
+        <activity android:name="AgeRangeDetailActivity"></activity>
+        <activity android:name="ManagerListActivity"></activity>
+        <activity android:name="ManagerQueryActivity"></activity>
+        <activity android:name="ManagerAddActivity"></activity>
+        <activity android:name="ManagerEditActivity"></activity>
+        <activity android:name="ManagerDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>
